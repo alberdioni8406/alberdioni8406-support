@@ -5,15 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Support My Bitcoin Cash Work | alberdioni8406</title>
-
   <meta name="description" content="Support independent Bitcoin Cash content from Africa. alberdioni8406 writes about BCH adoption, tools, and real-world use cases in Mozambique." />
   <meta name="keywords" content="Bitcoin Cash, BCH, crypto adoption, Africa, Mozambique, BCH content creator, peer-to-peer cash" />
   <meta name="author" content="alberdioni8406" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Support My Bitcoin Cash Work | alberdioni8406" />
-  <meta property="og:description" content="Independent Bitcoin Cash content focused on real adoption in Africa. Support with BCH tips or sponsorships." />
-  <meta property="og:type" content="website" />
 
   <style>
     body {
@@ -26,7 +20,7 @@
     }
 
     .container {
-      max-width: 760px;
+      max-width: 900px;
       margin: auto;
       padding: 40px 20px;
     }
@@ -38,6 +32,7 @@
     h1 {
       font-size: 2.2rem;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     h2 {
@@ -50,6 +45,26 @@
       color: #d0d0d0;
     }
 
+    ul {
+      padding-left: 0;
+      margin: 15px 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #000;
+    }
+
     .highlight {
       background: #1a1a1a;
       border-left: 4px solid #4caf50;
@@ -58,28 +73,98 @@
       border-radius: 6px;
     }
 
-    .address-box {
+    /* CTA Section */
+    .cta-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 30px 0;
+      padding: 20px;
       background: #1a1a1a;
+      border-radius: 8px;
+    }
+
+    .cta-text {
+      flex: 1 1 250px;
+    }
+
+    .address-box {
+      background: #0f0f0f;
       padding: 15px;
       border-radius: 6px;
       word-break: break-all;
       font-family: monospace;
-      margin-top: 10px;
+      flex: 1 1 300px;
+      margin-bottom: 12px;
     }
 
-    button {
-      margin-top: 10px;
-      padding: 10px 16px;
+    .qr-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 8px;
+      flex: 0 0 auto;
+    }
+
+    .tip-button {
+      margin-top: 12px;
+      padding: 12px 20px;
       border: none;
       border-radius: 6px;
       background: #4caf50;
       color: #000;
       font-weight: bold;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    button:hover {
+    .tip-button:hover {
       background: #43a047;
+    }
+
+    /* Blogs & Contact */
+    .blogs-section {
+      margin-top: 50px;
+    }
+
+    .blog-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 12px;
+      justify-content: center;
+    }
+
+    .blog-card {
+      flex: 1 1 140px;
+      background: #1a1a1a;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .blog-card:hover {
+      background: #4caf50;
+      color: #000;
+    }
+
+    .blog-card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+
+    .contact-email {
+      margin-top: 16px;
+      font-weight: bold;
+      text-align: center;
     }
 
     footer {
@@ -89,14 +174,25 @@
       text-align: center;
     }
 
-    img {
-      max-width: 220px;
-      margin: 20px 0;
-      border-radius: 8px;
+    @media(max-width: 600px) {
+      .cta-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .qr-img {
+        width: 140px;
+        height: 140px;
+      }
+      .blog-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      .blog-card {
+        flex: 1 1 80%;
+      }
     }
   </style>
 </head>
-
 <body>
   <div class="container">
 
@@ -123,26 +219,22 @@
       <li>On-the-ground perspective from Africa</li>
     </ul>
 
-    <h2>Support Options</h2>
-
-    <h3>💚 Send a Bitcoin Cash Tip</h3>
-
-    <!-- Coloca aqui o QR como imagem -->
-    <!-- Exemplo: <img src="qr.png" alt="Bitcoin Cash QR code"> -->
-
-    <div class="address-box" id="bchAddress">
-      bitcoincash:qp5wsnlhh8fesu42clk9z7ztq7l32ck57savwmcx44
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="cta-text">
+        <h2>Support me with Bitcoin Cash</h2>
+        <p>Your tips help me keep creating honest, independent BCH content and promoting adoption worldwide.</p>
+        <div class="address-box" id="bchAddress">
+          bitcoincash:qp5wsnlhh8fesu42clk9z7ztq7l32ck57savwmcx44
+        </div>
+        <button class="tip-button" onclick="copyAddress()">Copy BCH Address</button>
+      </div>
+      <img src="qr.png" alt="Bitcoin Cash QR code" class="qr-img">
     </div>
-
-    <button onclick="copyAddress()">Copy BCH Address</button>
-
-    <p>
-      Even a small tip helps keep independent BCH content alive.
-    </p>
 
     <h3>🤝 Ethical Sponsorships</h3>
     <p>
-      Bitcoin Cash projects and tools can support my work through sponsored articles, threads, or mentions.
+      Bitcoin Cash projects and tools can support my work through sponsored articles, threads, or mentions.  
       All sponsorships are transparent and never affect my honest opinion.
     </p>
 
@@ -157,12 +249,39 @@
       Just honest Bitcoin Cash content, written from real experience.
     </p>
 
+    <!-- Blogs & Contact Section -->
+    <div class="blogs-section">
+      <h2>My Blogs & Contact</h2>
+      <div class="blog-cards">
+        <a href="https://read.cash/@alberdioni8406" target="_blank" rel="noopener noreferrer" class="blog-card">
+          <img src="https://read.cash/favicon.png" alt="Read.cash logo">
+          Read.cash
+        </a>
+        <a href="https://www.publish0x.com/@alberdioni8406" target="_blank" rel="noopener noreferrer" class="blog-card">
+          <img src="https://www.publish0x.com/favicon.ico" alt="Publish0x logo">
+          Publish0x
+        </a>
+        <a href="https://bastyon.com/alberdioni8406" target="_blank" rel="noopener noreferrer" class="blog-card">
+          <img src="https://bastyon.com/favicon.ico" alt="Bastyon logo">
+          Bastyon
+        </a>
+        <a href="https://alberdioni8406.substack.com/" target="_blank" rel="noopener noreferrer" class="blog-card">
+          <img src="https://substack.com/favicon.ico" alt="Substack logo">
+          Substack
+        </a>
+        <a href="https://www.reddit.com/u/alberdioni8406_/s/hQu6KiWQwr" target="_blank" rel="noopener noreferrer" class="blog-card">
+          <img src="https://www.redditstatic.com/desktop2x/img/favicon/favicon-32x32.png" alt="Reddit logo">
+          Reddit
+        </a>
+      </div>
+      <p class="contact-email">Contact me via email: <a href="mailto:alberdioni8406@proton.me">alberdioni8406@proton.me</a></p>
+    </div>
+
     <footer>
       Independent Bitcoin Cash content • Built with ❤️ on Vercel  
       <br />
       — alberdioni8406
     </footer>
-
   </div>
 
   <script>
